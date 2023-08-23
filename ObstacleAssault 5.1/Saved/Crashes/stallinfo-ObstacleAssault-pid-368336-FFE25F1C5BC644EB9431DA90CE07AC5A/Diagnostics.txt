@@ -1,0 +1,67 @@
+Generating report for minidump
+
+Application version 5.1.1.0
+ ... built from changelist 23901901
+
+OS version Linux 5.15.0-79-generic (network name: Mint-broski)
+Running 4 x86_64 processors (4 logical cores)
+Exception was "UAssetEditorSubsystem::OpenEditorForAsset"
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+libUnrealEditor-Core.so!ThreadStackWalker(int, siginfo_t*, void*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Core/Private/Unix/UnixPlatformCrashContext.cpp:1034]
+libc.so.6!UnknownFunction(0x4251f)
+libUnrealEditor-Core.so!characterIteratorNext(UCharIterator*)()
+libUnrealEditor-Core.so!icu_64::RuleBasedCollator::compare(UCharIterator&, UCharIterator&, UErrorCode&) const(+0x73)
+libUnrealEditor-Core.so!FText::CompareTo(FText const&, ETextComparisonLevel::Type) const [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Core/Private/Internationalization/ICUText.cpp:114]
+libUnrealEditor-GraphEditor.so!FGraphActionNodeImpl::AlphabeticalNodeCompare(TSharedPtr<FGraphActionNode, (ESPMode)1> const&, TSharedPtr<FGraphActionNode, (ESPMode)1> const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/GraphActionNode.cpp:161]
+libUnrealEditor-GraphEditor.so!void AlgoImpl::IntroSortInternal<TSharedPtr<FGraphActionNode, (ESPMode)1>, int, FIdentityFunctor, TDereferenceWrapper<TSharedPtr<FGraphActionNode, (ESPMode)1>, bool (TSharedPtr<FGraphActionNode, (ESPMode)1> const&, TSharedPtr<FGraphActionNode, (ESPMode)1> const&)> >(TSharedPtr<FGraphActionNode, (ESPMode)1>*, int, FIdentityFunctor, TDereferenceWrapper<TSharedPtr<FGraphActionNode, (ESPMode)1>, bool (TSharedPtr<FGraphActionNode, (ESPMode)1> const&, TSharedPtr<FGraphActionNode, (ESPMode)1> const&)>) [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Algo/IntroSort.h:81]
+libUnrealEditor-GraphEditor.so!FGraphActionNode::SortChildren(bool, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/GraphActionNode.cpp:237]
+libUnrealEditor-GraphEditor.so!FGraphActionNode::SortChildren(bool, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/GraphActionNode.cpp:231]
+libUnrealEditor-GraphEditor.so!FGraphActionNode::SortChildren(bool, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/GraphActionNode.cpp:231]
+libUnrealEditor-GraphEditor.so!FGraphActionNode::SortChildren(bool, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/GraphActionNode.cpp:231]
+libUnrealEditor-GraphEditor.so!SGraphActionMenu::GenerateFilteredItems(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/SGraphActionMenu.cpp:795]
+libUnrealEditor-GraphEditor.so!SGraphActionMenu::RefreshAllActions(bool, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/SGraphActionMenu.cpp:410]
+libUnrealEditor-GraphEditor.so!SGraphActionMenu::Construct(SGraphActionMenu::FArguments const&, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/GraphEditor/Private/SGraphActionMenu.cpp:392]
+libUnrealEditor-Kismet.so!SBlueprintSubPalette::Construct(SBlueprintSubPalette::FArguments const&, TWeakPtr<FBlueprintEditor, (ESPMode)1>) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/SBlueprintSubPalette.cpp:288]
+libUnrealEditor-Kismet.so!SBlueprintLibraryPalette::Construct(SBlueprintLibraryPalette::FArguments const&, TWeakPtr<FBlueprintEditor, (ESPMode)1>) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/SBlueprintLibraryPalette.cpp:234]
+libUnrealEditor-Kismet.so!TSlateDecl<SBlueprintLibraryPalette, RequiredArgs::T1RequiredArgs<TWeakPtr<FBlueprintEditor, (ESPMode)1>&> >::operator<<=(SBlueprintLibraryPalette::FArguments const&) const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/SlateCore/Public/Widgets/DeclarativeSyntaxSupport.h:970]
+libUnrealEditor-Kismet.so!SBlueprintPalette::Construct(SBlueprintPalette::FArguments const&, TWeakPtr<FBlueprintEditor, (ESPMode)1>) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/SBlueprintPalette.cpp:2225]
+libUnrealEditor-Kismet.so!TSlateDecl<SBlueprintPalette, RequiredArgs::T1RequiredArgs<TSharedRef<FBlueprintEditor, (ESPMode)1>&&> >::operator<<=(SBlueprintPalette::FArguments const&) const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/SlateCore/Public/Widgets/DeclarativeSyntaxSupport.h:970]
+libUnrealEditor-Kismet.so!FBlueprintEditor::CreateDefaultTabContents(TArray<UBlueprint*, TSizedDefaultAllocator<32> > const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/BlueprintEditor.cpp:2884]
+libUnrealEditor-Kismet.so!FBlueprintEditor::CommonInitialization(TArray<UBlueprint*, TSizedDefaultAllocator<32> > const&, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/BlueprintEditor.cpp:2006]
+libUnrealEditor-Kismet.so!FBlueprintEditor::InitBlueprintEditor(EToolkitMode::Type, TSharedPtr<IToolkitHost, (ESPMode)1> const&, TArray<UBlueprint*, TSizedDefaultAllocator<32> > const&, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/BlueprintEditor.cpp:2337]
+libUnrealEditor-Kismet.so!FBlueprintEditorModule::CreateBlueprintEditor(EToolkitMode::Type, TSharedPtr<IToolkitHost, (ESPMode)1> const&, TArray<UBlueprint*, TSizedDefaultAllocator<32> > const&, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/BlueprintEditorModule.cpp:305]
+libUnrealEditor-Kismet.so!FBlueprintEditorModule::CreateBlueprintEditor(EToolkitMode::Type, TSharedPtr<IToolkitHost, (ESPMode)1> const&, UBlueprint*, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/BlueprintEditorModule.cpp:298]
+libUnrealEditor-AssetTools.so!FAssetTypeActions_Blueprint::OpenAssetEditor(TArray<UObject*, TSizedDefaultAllocator<32> > const&, TSharedPtr<IToolkitHost, (ESPMode)1>) [/mnt/horde/++UE5/Sync/Engine/Source/./Developer/AssetTools/Private/AssetTypeActions/AssetTypeActions_Blueprint.cpp:93]
+libUnrealEditor-UnrealEd.so!UAssetEditorSubsystem::OpenEditorForAsset(UObject*, EToolkitMode::Type, TSharedPtr<IToolkitHost, (ESPMode)1>, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/Subsystems/AssetEditorSubsystem.cpp:402]
+libUnrealEditor-UnrealEd.so!FKismetEditorUtilities::CreateBlueprintFromActor(FName, UObject*, AActor*, FKismetEditorUtilities::FCreateBlueprintFromActorParams const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/Kismet2/Kismet2.cpp:1534]
+libUnrealEditor-UnrealEd.so!FKismetEditorUtilities::CreateBlueprintFromActor(FString const&, AActor*, FKismetEditorUtilities::FCreateBlueprintFromActorParams const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/Kismet2/Kismet2.cpp:1061]
+libUnrealEditor-KismetWidgets.so!FCreateBlueprintFromActorDialog::OnCreateBlueprint(FString const&, UClass*, ECreateBlueprintFromActorMode, AActor*, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/KismetWidgets/Private/CreateBlueprintFromActorDialog.cpp:954]
+libUnrealEditor-KismetWidgets.so!FCreateBlueprintFromActorDialog::OpenDialog(ECreateBlueprintFromActorMode, AActor*, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/KismetWidgets/Private/CreateBlueprintFromActorDialog.cpp:903]
+libUnrealEditor-SubobjectEditor.so!TBaseSPMethodDelegateInstance<true, SSubobjectInstanceEditor const, (ESPMode)1, void (), FDefaultDelegateUserPolicy>::ExecuteIfSafe() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h:312]
+libUnrealEditor-Slate.so!SMenuEntryBlock::OnClicked(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:1153]
+libUnrealEditor-Slate.so!SMenuEntryBlock::OnMenuItemButtonClicked() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:1107]
+libUnrealEditor-Slate.so!TBaseSPMethodDelegateInstance<false, SMenuEntryBlock, (ESPMode)1, FReply (), FDefaultDelegateUserPolicy>::Execute() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h:295]
+libUnrealEditor-Slate.so!SButton::ExecuteOnClick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Widgets/Input/SButton.cpp:465]
+libUnrealEditor-Slate.so!SButton::OnMouseButtonUp(FGeometry const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Widgets/Input/SButton.cpp:390]
+libUnrealEditor-Slate.so!SMenuEntryButton::OnMouseButtonUp(FGeometry const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:431]
+libUnrealEditor-Slate.so!FSlateApplication::RoutePointerUpEvent(FWidgetPath const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5033]
+libUnrealEditor-Slate.so!FSlateApplication::ProcessMouseButtonUpEvent(FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5601]
+libUnrealEditor-Slate.so!FSlateApplication::OnMouseUp(EMouseButtons::Type, UE::Math::TVector2<double>) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5566]
+libUnrealEditor-ApplicationCore.so!FLinuxApplication::ProcessDeferredMessage(SDL_Event) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxApplication.cpp:414]
+libUnrealEditor-ApplicationCore.so!FLinuxPlatformApplicationMisc::PumpMessages(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxPlatformApplicationMisc.cpp:436]
+UnrealEditor!FEngineLoop::Tick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/LaunchEngineLoop.cpp:5287]
+UnrealEditor!GuardedMain(char16_t const*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/Launch.cpp:204]
+libUnrealEditor-UnixCommonStartup.so!CommonUnixMain(int, char**, int (*)(char16_t const*), void (*)()) [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Unix/UnixCommonStartup/Private/UnixCommonStartup.cpp:269]
+libc.so.6!UnknownFunction(0x29d8f)
+libc.so.6!__libc_start_main(+0x7f)
+UnrealEditor!_start()
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!

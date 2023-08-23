@@ -5,6 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"/media/data/Unreal Engine/Projects/obstacle-assault/ObstacleAssault 5.1/Content/Main.umap",
+				"/media/data/Unreal Engine/Projects/obstacle-assault/ObstacleAssault 5.1/Content/BP_ThirdPersonCharacter_Blueprint.uasset",
+				"/media/data/Unreal Engine/Projects/obstacle-assault/ObstacleAssault 5.1/Content/SCK_Casual01/Blueprints/ThirdPersonCharacter.uasset",
 				"/media/data/Unreal Engine/Projects/ObstacleAssault 5.1/Content/Main.umap"
 			]
 		}
